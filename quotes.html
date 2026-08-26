@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quotes — Les Maudits</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="portal-nav">
+  <div class="nav-inner">
+    <a class="wordmark" href="index.html">LES <span>MAUDITS</span></a>
+    <nav class="links">
+      <a href="index.html">Home</a>
+      <a href="directory.html">Directory</a>
+      <a href="lore.html">The Lore</a>
+      <a href="incidents.html">Incidents</a>
+      <a href="yearbook.html">Yearbook</a>
+      <a href="quotes.html" class="active">Quotes</a>
+      <a href="timeline.html">Timeline</a>
+      <a href="hall-of-shame.html">Hall of Shame</a>
+      <a href="stats.html">Statistics</a>
+      <a href="trips.html">School Trips</a>
+      <a href="notices.html">Notices</a>
+    </nav>
+  </div>
+</header>
+<div class="page-hero">
+  <img src="https://picsum.photos/seed/quotes/1400/500?grayscale" alt="">
+  <div class="overlay">
+    <div class="overlay-inner">
+      <span class="num mono">05 — TRANSCRIPT</span>
+      <h1 class="serif">Les Maudits Quotes</h1>
+      <p>Legendary things members have actually said in the group.</p>
+    </div>
+  </div>
+</div>
+
+<section class="block">
+  <div class="quote-box">
+    <div class="mark">“</div>
+    <div id="quote-text">Placeholder quote goes here.</div>
+    <div id="quote-attr">— Member, Year</div>
+    <button class="quote-btn" onclick="nextQuote()">ANOTHER QUOTE</button>
+  </div>
+</section>
+<script>
+  const quotes = [
+    { text: "Placeholder quote one.", attr: "— Member, 2025" },
+    { text: "Placeholder quote two.", attr: "— Member, 2025" },
+    { text: "Placeholder quote three.", attr: "— Member, 2026" },
+  ];
+  let qIndex = 0;
+  function nextQuote(){
+    qIndex = (qIndex + 1) % quotes.length;
+    document.getElementById('quote-text').textContent = quotes[qIndex].text;
+    document.getElementById('quote-attr').textContent = quotes[qIndex].attr;
+  }
+</script>
+
+<footer>
+  <div class="seal-small mono">LES MAUDITS — OFFICIAL STUDENT PORTAL — LM-001 THROUGH LM-007</div>
+  <div class="final-stamp">Valid until: Death. 😭</div>
+</footer>
+</body>
+</html>
