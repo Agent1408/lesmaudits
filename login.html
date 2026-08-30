@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Les Maudits — Access</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body class="gate-body">
+
+<div class="gate-box">
+  <div class="gate-eyebrow">Restricted Access — Les Maudits Institution</div>
+  <div class="gate-wordmark">LES M<span class="glitch" data-text="A">A</span>UDITS</div>
+  <div class="gate-tagline">ENTER ACCESS CODE TO CONTINUE</div>
+
+  <form id="gate-form" autocomplete="off">
+    <div class="pin-row" id="pin-row">
+      <input class="pin-box" inputmode="numeric" maxlength="1" type="password" data-i="0">
+      <input class="pin-box" inputmode="numeric" maxlength="1" type="password" data-i="1">
+      <input class="pin-box" inputmode="numeric" maxlength="1" type="password" data-i="2">
+      <input class="pin-box" inputmode="numeric" maxlength="1" type="password" data-i="3">
+    </div>
+    <button type="submit" class="gate-btn">ENTER</button>
+  </form>
+  <div class="gate-status" id="gate-status"></div>
+</div>
+
+<script>
+  const CODE = "1825";
+  const boxes = Array.from(document.querySelectorAll('.pin-box'));
+  const row = document.getElementById('pin-row');
+  const status = document.getElementById('gate-status');
+  const form = document.getElementById('gate-form');
+
+  boxes.forEach((box, i) => {
+    box.addEventListener('input', () => {
+      box.value = box.value.replace(/[^0-9]/g, '').slice(0, 1);
+      if (box.value && i < boxes.length - 1) boxes[i + 1].focus();
+    });
+    box.addEventListener('keydown', (e) => {
+      if (e.key === 'Backspace' && !box.value && i > 0) boxes[i - 1].focus();
+    });
+  });
+
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const entered = boxes.map(b => b.value).join('');
+
+    if (entered.length < 4) {
+      status.textContent = 'ENTER ALL 4 DIGITS';
+      status.className = 'gate-status denied';
+      return;
+    }
+
+    if (entered === CODE) {
+      status.textContent = 'ACCESS GRANTED';
+      status.className = 'gate-status granted';
+      sessionStorage.setItem('lm_access', 'granted');
+      setTimeout(() => { window.location.href = 'index.html'; }, 700);
+    } else {
+      status.textContent = 'ACCESS DENIED';
+      status.className = 'gate-status denied';
+      row.classList.remove('shake');
+      void row.offsetWidth;
+      row.classList.add('shake');
+      boxes.forEach(b => b.value = '');
+      boxes[0].focus();
+    }
+  });
+
+  boxes[0].focus();
+</script>
+
+</body>
+</html>
