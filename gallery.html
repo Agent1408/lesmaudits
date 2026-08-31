@@ -18,7 +18,6 @@
       <a href="directory.html">Directory</a>
       <a href="lore.html">The Lore</a>
       <a href="incidents.html">Incidents</a>
-      <a href="yearbook.html">Yearbook</a>
       <a href="quotes.html">Quotes</a>
       <a href="hall-of-shame.html">Hall of Shame</a>
       <a href="gallery.html" class="active">Gallery</a>
@@ -57,7 +56,7 @@
   <div class="gallery-grid" id="gallery-grid"></div>
 
   <div class="storage-note">
-    <strong>How this works:</strong> this site has no backend server, so uploaded photos are saved locally in this browser only — they won't appear for someone opening the site on a different phone or laptop. To build a gallery every member sees, this would need a real image host or database plugged in behind the scenes.
+    <strong>Shared archive:</strong> gallery photos are stored in Supabase and can appear for everyone visiting Les Maudits. Images are compressed before upload to save storage.
   </div>
 
 </section>
@@ -66,6 +65,7 @@
   <div class="seal-small mono">LES MAUDITS — OFFICIAL STUDENT PORTAL — LM-001 THROUGH LM-007</div>
   <div class="final-stamp">Valid until: Death. 😭</div>
 </footer>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script src="uploads.js"></script>
 <script>initGalleryPage();</script>
 </body>
