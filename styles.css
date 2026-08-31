@@ -390,16 +390,61 @@ main.single section.block:last-of-type{border-bottom:none;}
 /* ---------- NOTICE BOARD ---------- */
 .notice-list{display:flex; flex-direction:column;}
 .notice{
-  display:flex; justify-content:space-between; align-items:center;
+  display:flex; justify-content:space-between; align-items:center; gap:14px;
   padding:18px 4px; border-bottom:1px dashed var(--line);
   font-size:14.5px;
 }
 .notice:last-child{border-bottom:none;}
 .notice .n-name{font-weight:500;}
+.notice .n-name .n-sub{display:block; margin-top:3px; font-family:'IBM Plex Mono', monospace; font-size:11.5px; color:var(--muted); font-weight:400;}
+.notice .n-date{
+  font-family:'IBM Plex Mono', monospace; font-size:11.5px; color:var(--muted);
+  white-space:nowrap;
+}
 .notice .n-count{
   font-family:'IBM Plex Mono', monospace; font-size:12px; color:var(--gold-soft);
   background:var(--surface); border:1px solid var(--line); padding:5px 12px; border-radius:20px;
+  white-space:nowrap;
 }
+
+/* ---------- LIVE COUNTDOWN ---------- */
+.countdown-live{display:flex; gap:12px; margin-top:26px; flex-wrap:wrap;}
+.countdown-live .cd-box{
+  background:var(--surface); border:1px solid var(--line); border-radius:10px;
+  padding:16px 20px; text-align:center; min-width:82px;
+}
+.countdown-live .cd-num{
+  font-family:'Fraunces', serif; font-size:32px; font-weight:600; color:var(--gold-soft);
+  font-variant-numeric:tabular-nums;
+}
+.countdown-live .cd-label{
+  margin-top:4px; font-family:'IBM Plex Mono', monospace; font-size:10px; color:var(--muted);
+  letter-spacing:0.08em;
+}
+
+/* ---------- BAR LISTS ---------- */
+.bar-list{display:flex; flex-direction:column; gap:12px;}
+.bar-row{display:grid; grid-template-columns:104px 1fr 84px; align-items:center; gap:14px; font-size:13.5px;}
+.bar-row .bar-tag{font-family:'IBM Plex Mono', monospace; font-size:12px; color:var(--muted);}
+.bar-track{background:var(--surface); border:1px solid var(--line); border-radius:6px; overflow:hidden; height:12px;}
+.bar-fill{background:var(--gold); height:100%; border-radius:6px 0 0 6px;}
+.bar-row.highlight .bar-tag{color:var(--gold-soft);}
+.bar-row.highlight .bar-fill{background:var(--gold-soft);}
+.bar-row .bar-count{
+  font-family:'IBM Plex Mono', monospace; font-size:12px; color:var(--gold-soft); text-align:right;
+}
+
+/* ---------- RECORD GRID ---------- */
+.record-grid{display:grid; grid-template-columns:repeat(auto-fill, minmax(240px,1fr)); gap:18px;}
+.record-card{background:var(--surface); border:1px solid var(--line); border-radius:10px; padding:24px;}
+.record-card .trophy{font-size:22px; margin-bottom:12px;}
+.record-card h4{font-family:'Fraunces', serif; font-size:16px; margin-bottom:8px;}
+.record-card .holder{font-family:'IBM Plex Mono', monospace; font-size:11px; color:var(--gold-soft);}
+.record-card .rec-detail{margin-top:8px; font-size:13px; color:var(--muted); line-height:1.5;}
+
+/* ---------- SUBSECTION SPACING ---------- */
+.subsection{margin-top:64px;}
+.subsection .block-head{margin-bottom:28px;}
 
 /* ---------- FOOTER ---------- */
 footer{max-width:1180px; margin:0 auto; padding:60px 24px 80px; text-align:center;}
