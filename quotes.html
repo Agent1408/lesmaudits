@@ -33,24 +33,87 @@
     <div class="overlay-inner">
       <span class="num mono">05 — TRANSCRIPT</span>
       <h1 class="serif">Les Maudits Quotes</h1>
-      <p>Legendary things members have actually said in the group.</p>
+      <p>Statements permanently entered into the institutional record.</p>
     </div>
   </div>
 </div>
 
 <section class="block">
   <div class="quote-box">
-    <div class="mark">“</div>
-    <div id="quote-text">Placeholder quote goes here.</div>
-    <div id="quote-attr">— Member, Year</div>
+    <div class="mark">"</div>
+    <div id="quote-text">I CANT BE THE ONLY ONE TALKING</div>
+    <div id="quote-attr">— William, 05.09.2025</div>
     <button class="quote-btn" onclick="nextQuote()">ANOTHER QUOTE</button>
   </div>
+
+  <div class="quote-archive">
+
+    <div class="quote-card">
+      <div class="qc-head">
+        <span class="qc-no">001 — WILLIAM</span>
+        <span>05.09.2025</span>
+      </div>
+      <blockquote>"I CANT BE THE ONLY ONE TALKING"</blockquote>
+      <p class="qc-context">Considering what the group eventually became, William may regret this request.</p>
+      <div class="qc-verdict">ARCHIVE VERDICT: He asked for activity. He got Randy.</div>
+    </div>
+
+    <div class="quote-card">
+      <div class="qc-head">
+        <span class="qc-no">002 — JJ</span>
+        <span>05.09.2025</span>
+      </div>
+      <blockquote>"Je ss au toilettes actu donc waitez d'abord"</blockquote>
+      <p class="qc-context">Possibly the earliest surviving masterpiece of Francanglais. French structure. English intervention. Questionable spelling. Perfectly understandable.</p>
+      <div class="qc-verdict">ARCHIVE VERDICT: Linguists remain concerned.</div>
+    </div>
+
+    <div class="quote-card">
+      <div class="qc-head">
+        <span class="qc-no">003 — BLOCK</span>
+        <span>06.09.2025</span>
+      </div>
+      <blockquote>"Situation ?"</blockquote>
+      <p class="qc-context">Block enters Les Maudits and immediately requests a situation report. He would later finish the analysed period with only 356 messages, making this perhaps the most accurate introduction in institutional history.</p>
+      <div class="qc-verdict">ARCHIVE VERDICT: Arrived confused. Remained mysterious.</div>
+    </div>
+
+    <div class="quote-card">
+      <div class="qc-head">
+        <span class="qc-no">004 — VAL</span>
+        <span>05.09.2025</span>
+      </div>
+      <blockquote>"You guys are switching up"</blockquote>
+      <p class="qc-context">Years of future accusations, arguments and Hall of Shame material compressed into five words. Val would later receive the institution's 🐍 Biggest Switch-Up Award. The irony has been preserved permanently.</p>
+      <div class="qc-verdict">ARCHIVE VERDICT: The call was coming from inside the house.</div>
+    </div>
+
+    <div class="quote-card">
+      <div class="qc-head">
+        <span class="qc-no">005 — HOPKINS</span>
+        <span>05.09.2025</span>
+      </div>
+      <blockquote>"I don't even understand what is happening"</blockquote>
+      <p class="qc-context">Perhaps the most universally applicable statement in Les Maudits history. It worked in September 2025. It works now. It will probably still work in 2035.</p>
+      <div class="qc-verdict">ARCHIVE VERDICT: Official institutional motto candidate.</div>
+    </div>
+
+  </div>
+
+  <div class="archive-footer-note">
+    <p>Messages may be deleted. Messages may be edited. Context may be forgotten.</p>
+    <p>Unfortunately, Les Maudits keeps receipts.</p>
+    <div class="archives-remember">THE ARCHIVES REMEMBER.</div>
+  </div>
+
 </section>
 <script>
   const quotes = [
-    { text: "Placeholder quote one.", attr: "— Member, 2025" },
-    { text: "Placeholder quote two.", attr: "— Member, 2025" },
-    { text: "Placeholder quote three.", attr: "— Member, 2026" },
+    { text: "I CANT BE THE ONLY ONE TALKING", attr: "— William, 05.09.2025" },
+    { text: "Je ss au toilettes actu donc waitez d'abord", attr: "— JJ, 05.09.2025" },
+    { text: "Situation ?", attr: "— Block, 06.09.2025" },
+    { text: "You guys are switching up", attr: "— Val, 05.09.2025" },
+    { text: "I don't even understand what is happening", attr: "— Hopkins, 05.09.2025" },
   ];
   let qIndex = 0;
   function nextQuote(){

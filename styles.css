@@ -416,6 +416,50 @@ main.single section.block:last-of-type{border-bottom:none;}
 .shame-card h4{font-family:'Fraunces', serif; font-size:16px; margin-bottom:8px;}
 .shame-card .holder{font-family:'IBM Plex Mono', monospace; font-size:11px; color:var(--gold-soft);}
 
+/* ---------- SHAME LIST (full award record) ---------- */
+.shame-list{display:flex; flex-direction:column; gap:10px; margin-top:10px;}
+.shame-row{
+  background:var(--surface); border:1px solid var(--line); border-radius:8px;
+  padding:16px 20px; display:grid; grid-template-columns:1fr auto; gap:4px 16px; align-items:center;
+}
+.shame-row .award-title{font-family:'Fraunces', serif; font-size:15px;}
+.shame-row .winner-badge{
+  font-family:'IBM Plex Mono', monospace; font-size:11px; color:var(--gold-soft);
+  border:1px solid var(--line); padding:4px 10px; border-radius:20px; justify-self:end; white-space:nowrap;
+}
+.shame-row .reason{grid-column:1/-1; color:var(--muted); font-size:13px; line-height:1.5;}
+
+/* ---------- REPEAT OFFENDERS ---------- */
+.offender-card{
+  background:var(--surface); border:1px solid var(--line); border-left:3px solid var(--stamp);
+  border-radius:10px; padding:24px 26px; margin-bottom:16px;
+}
+.offender-card h3{font-family:'Fraunces', serif; font-size:19px; margin-bottom:4px;}
+.offender-card .threat{
+  font-family:'IBM Plex Mono', monospace; font-size:11px; letter-spacing:0.05em;
+  color:var(--stamp-bright); margin-bottom:12px;
+}
+.offender-card p{color:var(--muted); font-size:14px; margin-bottom:8px;}
+.offender-card p:last-child{margin-bottom:0;}
+
+/* ---------- QUOTE ARCHIVE ---------- */
+.quote-archive{display:flex; flex-direction:column; gap:16px; margin-top:44px;}
+.quote-card{
+  background:var(--surface); border:1px solid var(--line); border-left:3px solid var(--gold);
+  border-radius:6px; padding:22px 24px;
+}
+.quote-card .qc-head{
+  display:flex; justify-content:space-between; flex-wrap:wrap; gap:8px;
+  font-family:'IBM Plex Mono', monospace; font-size:11px; color:var(--muted); margin-bottom:10px;
+}
+.quote-card .qc-head .qc-no{color:var(--gold-soft); font-weight:600;}
+.quote-card blockquote{font-family:'Fraunces', serif; font-style:italic; font-size:17px; margin-bottom:10px;}
+.quote-card .qc-context{color:var(--muted); font-size:13.5px; margin-bottom:10px; line-height:1.6;}
+.quote-card .qc-verdict{font-family:'IBM Plex Mono', monospace; font-size:11px; color:var(--stamp-bright); letter-spacing:0.03em;}
+.archive-footer-note{text-align:center; margin-top:52px; padding-top:36px; border-top:1px solid var(--line);}
+.archive-footer-note p{color:var(--muted); font-size:14px; margin-bottom:6px;}
+.archive-footer-note .archives-remember{font-family:'Fraunces', serif; font-size:22px; color:var(--gold-soft); margin-top:12px; font-style:italic;}
+
 /* ---------- STATS ---------- */
 .stat-grid{display:grid; grid-template-columns:repeat(auto-fit, minmax(180px,1fr)); gap:22px;}
 .stat-card{background:var(--surface); border:1px solid var(--line); border-radius:10px; padding:26px;}
