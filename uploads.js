@@ -1,18 +1,8 @@
 /* Les Maudits — shared photo uploads powered by Supabase Storage. */
-const LM_SUPABASE_URL = 'https://wemdjpynokcqklikkapf.supabase.co';
-const LM_SUPABASE_KEY = 'sb_publishable_Y3BS1wZRgApwpYdxIinCEQ_bZ_0pe0B';
 const LM_BUCKET = 'les-maudits';
 const LM_MAX_DIM = 1600;
-const LM_MEMBERS = ['William','Hopkins','JJ','Randy','Corneille','Val','Block'];
-const lmSupabase = window.supabase.createClient(LM_SUPABASE_URL, LM_SUPABASE_KEY);
-
-function lmCurrentUploader(){ return localStorage.getItem('lm_gallery_uploader') || 'William'; }
-function lmSetUploader(name){ localStorage.setItem('lm_gallery_uploader', name); renderUploaderTags(); }
-function renderUploaderTags(){
-  const row = document.getElementById('uploader-tag-row'); if (!row) return;
-  const current = lmCurrentUploader();
-  row.innerHTML = LM_MEMBERS.map(name => '<button type="button" class="uploader-tag' + (name===current?' active':'') + '" onclick="lmSetUploader(\''+name+'\')">'+name+'</button>').join('');
-}
+const lmSupabase = window.lmSupabase;
+async function lmCurrentUploader(){ const {data:{session}}=await lmSupabase.auth.getSession(); return lmMemberFromUser(session&&session.user); }
 
 function lmCompressImage(file){
   return new Promise((resolve,reject)=>{
@@ -37,7 +27,8 @@ async function handleGalleryUpload(fileList){
   try{
     for(const file of files){
       const blob=await lmCompressImage(file);
-      const uploader=lmCurrentUploader();
+      const uploader=await lmCurrentUploader();
+      if(!uploader) throw new Error('You must be logged in to upload.');
       const path='gallery/'+Date.now()+'-'+Math.random().toString(36).slice(2,8)+'__'+lmSafeName(uploader)+'.jpg';
       const {error}=await lmSupabase.storage.from(LM_BUCKET).upload(path,blob,{contentType:'image/jpeg',upsert:false});
       if(error) throw error;
@@ -72,7 +63,8 @@ function loadAvatar(id){const saved=localStorage.getItem('lm_avatar_'+id);if(sav
 function handleAvatarUpload(event,id){const f=event.target.files[0];if(!f)return;lmReadFileAsCompressedDataURL(f,data=>{localStorage.setItem('lm_avatar_'+id,data);const el=document.getElementById('avatar-img-'+id);if(el)el.src=data;});}
 
 function initGalleryPage(){
-  renderUploaderTags(); renderGallery();
+  renderGallery();
+  lmCurrentUploader().then(name=>{const el=document.getElementById('upload-identity');if(el)el.innerHTML='<strong>UPLOADING AS:</strong> '+(name||'Not signed in');});
   const zone=document.getElementById('upload-zone'),input=document.getElementById('gallery-file-input'); if(!zone||!input)return;
   zone.addEventListener('click',()=>input.click());
   input.addEventListener('change',async()=>{await handleGalleryUpload(input.files);input.value='';});

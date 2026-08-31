@@ -9,7 +9,9 @@
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<script>if(sessionStorage.getItem("lm_access")!=="granted"){window.location.href="login.html";}</script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="auth.js"></script>
+<script>lmRequireAuth();</script>
 <header class="portal-nav">
   <div class="nav-inner">
     <a class="wordmark" href="index.html">LES <span>MAUDITS</span></a>
@@ -24,7 +26,7 @@
       <a href="stats.html">Statistics</a>
       <a href="calendar.html">Calendar</a>
     </nav>
-    <a href="#" class="logout-link" onclick="sessionStorage.removeItem('lm_access'); window.location.href='login.html'; return false;">Log Out</a>
+    <span class="signed-in-member"></span><a href="#" class="logout-link" onclick="lmLogout(); return false;">Log Out</a>
   </div>
 </header>
 
@@ -80,7 +82,7 @@
   <div class="seal-small mono">LES MAUDITS — OFFICIAL STUDENT PORTAL — LM-001 THROUGH LM-007</div>
   <div class="final-stamp">Valid until: Death. 😭</div>
 </footer>
-<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
 <script src="uploads.js"></script>
 <script>loadAvatar('LM-005');</script>
 </body>
