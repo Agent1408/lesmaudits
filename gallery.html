@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Yearbook — Les Maudits</title>
+<title>Gallery — Les Maudits</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
@@ -18,57 +18,55 @@
       <a href="directory.html">Directory</a>
       <a href="lore.html">The Lore</a>
       <a href="incidents.html">Incidents</a>
-      <a href="yearbook.html" class="active">Yearbook</a>
+      <a href="yearbook.html">Yearbook</a>
       <a href="quotes.html">Quotes</a>
       <a href="hall-of-shame.html">Hall of Shame</a>
-      <a href="gallery.html">Gallery</a>
+      <a href="gallery.html" class="active">Gallery</a>
       <a href="stats.html">Statistics</a>
       <a href="calendar.html">Calendar</a>
     </nav>
     <a href="#" class="logout-link" onclick="sessionStorage.removeItem('lm_access'); window.location.href='login.html'; return false;">Log Out</a>
   </div>
 </header>
+
 <div class="page-hero">
-  <img src="https://picsum.photos/seed/yearbook/1400/500?grayscale" alt="">
+  <img src="https://picsum.photos/seed/gallery/1400/500?grayscale" alt="">
   <div class="overlay">
     <div class="overlay-inner">
-      <span class="num mono">04 — ARCHIVES</span>
-      <h1 class="serif">Yearbook / Archives</h1>
-      <p>The full photo and video collection, organised by year.</p>
+      <span class="num mono">07 — EVIDENCE</span>
+      <h1 class="serif">Gallery</h1>
+      <p>Upload photos to the institutional record. Tag yourself before you upload.</p>
     </div>
   </div>
 </div>
 
 <section class="block">
-  <div class="year-tabs">
-    <button class="year-tab active" data-year="2025">2025</button>
-    <button class="year-tab" data-year="2026">2026</button>
-    <button class="year-tab" data-year="2027">2027</button>
+
+  <div class="block-head">
+    <span class="num mono">UPLOAD AS</span>
   </div>
-  <div class="year-panel active" id="year-2025">
-    <div class="empty-state">Photos pending upload.</div>
+  <div class="uploader-tag-row" id="uploader-tag-row"></div>
+
+  <div class="upload-zone" id="upload-zone">
+    <div class="up-icon">📷</div>
+    <h3>Drop photos here, or click to choose</h3>
+    <p>JPG, PNG, or WEBP. Multiple photos at once are fine.</p>
+    <input type="file" id="gallery-file-input" accept="image/*" multiple>
   </div>
-  <div class="year-panel" id="year-2026">
-    <div class="empty-state">Photos pending upload.</div>
+
+  <div class="gallery-grid" id="gallery-grid"></div>
+
+  <div class="storage-note">
+    <strong>How this works:</strong> this site has no backend server, so uploaded photos are saved locally in this browser only — they won't appear for someone opening the site on a different phone or laptop. To build a gallery every member sees, this would need a real image host or database plugged in behind the scenes.
   </div>
-  <div class="year-panel" id="year-2027">
-    <div class="empty-state">No memories yet.</div>
-  </div>
+
 </section>
-<script>
-  document.querySelectorAll('.year-tab').forEach(tab => {
-    tab.addEventListener('click', () => {
-      document.querySelectorAll('.year-tab').forEach(t => t.classList.remove('active'));
-      document.querySelectorAll('.year-panel').forEach(p => p.classList.remove('active'));
-      tab.classList.add('active');
-      document.getElementById('year-' + tab.dataset.year).classList.add('active');
-    });
-  });
-</script>
 
 <footer>
   <div class="seal-small mono">LES MAUDITS — OFFICIAL STUDENT PORTAL — LM-001 THROUGH LM-007</div>
   <div class="final-stamp">Valid until: Death. 😭</div>
 </footer>
+<script src="uploads.js"></script>
+<script>initGalleryPage();</script>
 </body>
 </html>

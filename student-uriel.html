@@ -21,6 +21,7 @@
       <a href="yearbook.html">Yearbook</a>
       <a href="quotes.html">Quotes</a>
       <a href="hall-of-shame.html">Hall of Shame</a>
+      <a href="gallery.html">Gallery</a>
       <a href="stats.html">Statistics</a>
       <a href="calendar.html">Calendar</a>
     </nav>
@@ -31,7 +32,7 @@
 <div class="breadcrumb"><a href="directory.html">← Directory</a> / LM-007</div>
 <section class="block">
   <div class="file-header">
-    <div class="avatar-lg"><img src="https://i.pravatar.cc/400?img=7" alt="Uriel"></div>
+    <div class="avatar-lg" id="avatar-LM-007"><img src="https://i.pravatar.cc/400?img=7" alt="Uriel &ldquo;Block&rdquo;" id="avatar-img-LM-007"><label class="avatar-upload-btn" for="avatar-input-LM-007">📷 Upload photo</label><input type="file" id="avatar-input-LM-007" accept="image/*" style="display:none" onchange="handleAvatarUpload(event,'LM-007')"></div>
     <div>
       <h1 class="serif">Uriel</h1>
       <div class="aka">AKA: Block</div>
@@ -47,22 +48,30 @@
   <div class="file-grid">
     <div class="file-notes">
       <span class="placeholder-tag">NICKNAME</span>
-      <p>Placeholder — how Uriel got called what they're called.</p>
+      <p>Technically a permanent member. Statistically a recurring guest appearance.</p>
       <span class="placeholder-tag">MEMORABLE QUOTE</span>
-      <p>"Placeholder quote goes here." — replace with something Uriel actually said.</p>
+      <p class="inc-quote" style="margin:0 0 14px;">&ldquo;Situation ?&rdquo;</p>
+      <p class="qc-context" style="margin-top:-8px;">Possibly the most accurate introduction anyone has ever made.</p>
       <span class="placeholder-tag">FUNNY FACT</span>
-      <p>Placeholder — a running joke or defining trait.</p>
+      <p>Only <strong>356 messages</strong> in the analysed archive. But <strong>91 of those contained questions</strong>. So Block disappears, returns, discovers that everything has changed, and immediately requests a briefing.</p>
       <span class="placeholder-tag">BEST MOMENT</span>
-      <p>Placeholder — Uriel's best appearance in Les Maudits history.</p>
+      <p><strong>06.09.2025 — BLOCK SPAWNS.</strong> Joins the institution. Surveys the chaos. Asks: &ldquo;Situation ?&rdquo; Perfect entrance. No notes.</p>
     </div>
     <div class="file-side">
       <div class="side-card">
         <h4>Appearances</h4>
-        <p>Incidents, trips, and timeline entries Uriel shows up in — to be linked once the archive fills in.</p>
+        <p>Block Spawns • Missing Persons Department • Hall of Shame • Wrapped • Occasional Sightings</p>
       </div>
       <div class="side-card">
         <h4>Status Log</h4>
-        <p>ACTIVE since 18.08.2025.</p>
+        <p>🟢 <strong>ACTIVE since 06.09.2025</strong><br>Current whereabouts: <strong>Unknown</strong><br>Last known statement: &ldquo;Situation?&rdquo;</p>
+      </div>
+      <div class="class-footer">
+        <div><strong>CLASS:</strong> LES MAUDITS</div>
+        <div><strong>STATUS:</strong> ACTIVE</div>
+        <div><strong>MEMBERSHIP:</strong> PERMANENT</div>
+        <div><strong>VALID UNTIL:</strong> DEATH</div>
+        <div class="expiry-line">First to reach expiry is a bitch. 😭</div>
       </div>
     </div>
   </div>
@@ -72,5 +81,7 @@
   <div class="seal-small mono">LES MAUDITS — OFFICIAL STUDENT PORTAL — LM-001 THROUGH LM-007</div>
   <div class="final-stamp">Valid until: Death. 😭</div>
 </footer>
+<script src="uploads.js"></script>
+<script>loadAvatar('LM-007');</script>
 </body>
 </html>

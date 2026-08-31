@@ -21,6 +21,7 @@
       <a href="yearbook.html">Yearbook</a>
       <a href="quotes.html">Quotes</a>
       <a href="hall-of-shame.html">Hall of Shame</a>
+      <a href="gallery.html">Gallery</a>
       <a href="stats.html">Statistics</a>
       <a href="calendar.html">Calendar</a>
     </nav>
@@ -31,10 +32,10 @@
 <div class="breadcrumb"><a href="directory.html">← Directory</a> / LM-004</div>
 <section class="block">
   <div class="file-header">
-    <div class="avatar-lg"><img src="https://i.pravatar.cc/400?img=4" alt="Randy"></div>
+    <div class="avatar-lg" id="avatar-LM-004"><img src="https://i.pravatar.cc/400?img=4" alt="Randy" id="avatar-img-LM-004"><label class="avatar-upload-btn" for="avatar-input-LM-004">📷 Upload photo</label><input type="file" id="avatar-input-LM-004" accept="image/*" style="display:none" onchange="handleAvatarUpload(event,'LM-004')"></div>
     <div>
       <h1 class="serif">Randy</h1>
-      <div class="aka">AKA: —</div>
+      <div class="aka">AKA: The Group Chat Final Boss</div>
     </div>
   </div>
   <div class="file-meta-row">
@@ -47,22 +48,29 @@
   <div class="file-grid">
     <div class="file-notes">
       <span class="placeholder-tag">NICKNAME</span>
-      <p>Placeholder — how Randy got called what they're called.</p>
+      <p>Not merely a member of the chat. At <strong>9,222 messages</strong>, Randy is practically part of WhatsApp's infrastructure.</p>
       <span class="placeholder-tag">MEMORABLE QUOTE</span>
-      <p>"Placeholder quote goes here." — replace with something Randy actually said.</p>
+      <p class="inc-quote" style="margin:0 0 14px;">&ldquo;Vous voyez un peu non&rdquo;</p>
       <span class="placeholder-tag">FUNNY FACT</span>
-      <p>Placeholder — a running joke or defining trait.</p>
+      <p>Randy holds an unreasonable number of records: <strong>9,222 messages</strong> · <strong>369 photos</strong> · <strong>419 questions</strong> · <strong>304 mentions received</strong> · <strong>775 midnight–5 AM messages</strong> · <strong>1,066 morning messages</strong>.</p>
       <span class="placeholder-tag">BEST MOMENT</span>
-      <p>Placeholder — Randy's best appearance in Les Maudits history.</p>
+      <p><strong>THE 5 A.M. ATTACK — 10.06.2026.</strong> Randy sent <strong>150 messages between 5:00 and 5:59 AM.</strong> Sixty minutes. One hundred and fifty messages. Nobody knows why.</p>
     </div>
     <div class="file-side">
       <div class="side-card">
         <h4>Appearances</h4>
-        <p>Incidents, trips, and timeline entries Randy shows up in — to be linked once the archive fills in.</p>
+        <p>5 A.M. Attack • Hall of Shame • Main Character Award • MVP • Wrapped • Caught in 4K • Basically Everywhere</p>
       </div>
       <div class="side-card">
         <h4>Status Log</h4>
-        <p>ACTIVE since 18.08.2025.</p>
+        <p>🟢 <strong>ACTIVE</strong><br>Threat level: 🔴 <strong>CRITICAL</strong><br>Probably typing.</p>
+      </div>
+      <div class="class-footer">
+        <div><strong>CLASS:</strong> LES MAUDITS</div>
+        <div><strong>STATUS:</strong> ACTIVE</div>
+        <div><strong>MEMBERSHIP:</strong> PERMANENT</div>
+        <div><strong>VALID UNTIL:</strong> DEATH</div>
+        <div class="expiry-line">First to reach expiry is a bitch. 😭</div>
       </div>
     </div>
   </div>
@@ -72,5 +80,7 @@
   <div class="seal-small mono">LES MAUDITS — OFFICIAL STUDENT PORTAL — LM-001 THROUGH LM-007</div>
   <div class="final-stamp">Valid until: Death. 😭</div>
 </footer>
+<script src="uploads.js"></script>
+<script>loadAvatar('LM-004');</script>
 </body>
 </html>

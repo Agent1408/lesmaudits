@@ -21,6 +21,7 @@
       <a href="yearbook.html">Yearbook</a>
       <a href="quotes.html">Quotes</a>
       <a href="hall-of-shame.html">Hall of Shame</a>
+      <a href="gallery.html">Gallery</a>
       <a href="stats.html">Statistics</a>
       <a href="calendar.html">Calendar</a>
     </nav>
@@ -31,10 +32,10 @@
 <div class="breadcrumb"><a href="directory.html">← Directory</a> / LM-006</div>
 <section class="block">
   <div class="file-header">
-    <div class="avatar-lg"><img src="https://i.pravatar.cc/400?img=6" alt="Val"></div>
+    <div class="avatar-lg" id="avatar-LM-006"><img src="https://i.pravatar.cc/400?img=6" alt="Val" id="avatar-img-LM-006"><label class="avatar-upload-btn" for="avatar-input-LM-006">📷 Upload photo</label><input type="file" id="avatar-input-LM-006" accept="image/*" style="display:none" onchange="handleAvatarUpload(event,'LM-006')"></div>
     <div>
       <h1 class="serif">Val</h1>
-      <div class="aka">AKA: —</div>
+      <div class="aka">AKA: The Reaction Merchant</div>
     </div>
   </div>
   <div class="file-meta-row">
@@ -47,22 +48,30 @@
   <div class="file-grid">
     <div class="file-notes">
       <span class="placeholder-tag">NICKNAME</span>
-      <p>Placeholder — how Val got called what they're called.</p>
+      <p>The institution's primary supplier of stickers, reactions, CAPS LOCK and unnecessary escalation.</p>
       <span class="placeholder-tag">MEMORABLE QUOTE</span>
-      <p>"Placeholder quote goes here." — replace with something Val actually said.</p>
+      <p class="inc-quote" style="margin:0 0 14px;">&ldquo;You guys are switching up&rdquo;</p>
+      <p class="qc-context" style="margin-top:-8px;">Which later became extremely unfortunate evidence after receiving the Biggest Switch-Up Award 😭</p>
       <span class="placeholder-tag">FUNNY FACT</span>
-      <p>Placeholder — a running joke or defining trait.</p>
+      <p>Sent <strong>1,412 stickers</strong> — nearly half of the group's sticker supply. Also: <strong>#1 videos (72)</strong> · <strong>#1 links (22)</strong> · <strong>#1 CAPS messages (87)</strong> · fastest consecutive texting at an <strong>8 sec median</strong>.</p>
       <span class="placeholder-tag">BEST MOMENT</span>
-      <p>Placeholder — Val's best appearance in Les Maudits history.</p>
+      <p>Sending the longest known message in the archive at approximately <strong>2,071 characters</strong>. Val has two communication modes: 8-second messages, or a full dissertation.</p>
     </div>
     <div class="file-side">
       <div class="side-card">
         <h4>Appearances</h4>
-        <p>Incidents, trips, and timeline entries Val shows up in — to be linked once the archive fills in.</p>
+        <p>September 5th Confusion • Sticker Trafficking Case • Hall of Shame • Biggest Switch-Up • Wrapped • Yearbook</p>
       </div>
       <div class="side-card">
         <h4>Status Log</h4>
-        <p>ACTIVE since 18.08.2025.</p>
+        <p>🟢 <strong>ACTIVE since 05.09.2025</strong><br>Sticker licence: <strong>UNDER REVIEW</strong></p>
+      </div>
+      <div class="class-footer">
+        <div><strong>CLASS:</strong> LES MAUDITS</div>
+        <div><strong>STATUS:</strong> ACTIVE</div>
+        <div><strong>MEMBERSHIP:</strong> PERMANENT</div>
+        <div><strong>VALID UNTIL:</strong> DEATH</div>
+        <div class="expiry-line">First to reach expiry is a bitch. 😭</div>
       </div>
     </div>
   </div>
@@ -72,5 +81,7 @@
   <div class="seal-small mono">LES MAUDITS — OFFICIAL STUDENT PORTAL — LM-001 THROUGH LM-007</div>
   <div class="final-stamp">Valid until: Death. 😭</div>
 </footer>
+<script src="uploads.js"></script>
+<script>loadAvatar('LM-006');</script>
 </body>
 </html>

@@ -21,6 +21,7 @@
       <a href="yearbook.html">Yearbook</a>
       <a href="quotes.html">Quotes</a>
       <a href="hall-of-shame.html">Hall of Shame</a>
+      <a href="gallery.html">Gallery</a>
       <a href="stats.html">Statistics</a>
       <a href="calendar.html">Calendar</a>
     </nav>
@@ -31,10 +32,10 @@
 <div class="breadcrumb"><a href="directory.html">← Directory</a> / LM-001</div>
 <section class="block">
   <div class="file-header">
-    <div class="avatar-lg"><img src="https://i.pravatar.cc/400?img=1" alt="William"></div>
+    <div class="avatar-lg" id="avatar-LM-001"><img src="https://i.pravatar.cc/400?img=1" alt="William" id="avatar-img-LM-001"><label class="avatar-upload-btn" for="avatar-input-LM-001">📷 Upload photo</label><input type="file" id="avatar-input-LM-001" accept="image/*" style="display:none" onchange="handleAvatarUpload(event,'LM-001')"></div>
     <div>
       <h1 class="serif">William</h1>
-      <div class="aka">AKA: —</div>
+      <div class="aka">AKA: The Editor-in-Chief / The Founder</div>
     </div>
   </div>
   <div class="file-meta-row">
@@ -47,22 +48,29 @@
   <div class="file-grid">
     <div class="file-notes">
       <span class="placeholder-tag">NICKNAME</span>
-      <p>Placeholder — how William got called what they're called.</p>
+      <p>Founder of Les Maudits and unofficial Department of Corrections. If a message can be edited, William will find a way.</p>
       <span class="placeholder-tag">MEMORABLE QUOTE</span>
-      <p>"Placeholder quote goes here." — replace with something William actually said.</p>
+      <p class="inc-quote" style="margin:0 0 14px;">&ldquo;I CANT BE THE ONLY ONE TALKING&rdquo;</p>
       <span class="placeholder-tag">FUNNY FACT</span>
-      <p>Placeholder — a running joke or defining trait.</p>
+      <p>Edited <strong>168 messages</strong>, more than anyone else. Apparently sending the message is only the first draft.</p>
       <span class="placeholder-tag">BEST MOMENT</span>
-      <p>Placeholder — William's best appearance in Les Maudits history.</p>
+      <p><strong>18.08.2025 — Creating Les Maudits.</strong> Every incident, argument and Hall of Shame conviction that followed can technically be traced back to this decision.</p>
     </div>
     <div class="file-side">
       <div class="side-card">
         <h4>Appearances</h4>
-        <p>Incidents, trips, and timeline entries William shows up in — to be linked once the archive fills in.</p>
+        <p>Founding Day • September 5th Confusion • Hall of Shame • Les Maudits Wrapped • Yearbook Archives</p>
       </div>
       <div class="side-card">
         <h4>Status Log</h4>
-        <p>ACTIVE since 18.08.2025.</p>
+        <p>🟢 <strong>ACTIVE</strong><br>Founder since <strong>18.08.2025</strong>.<br>Original offender. Cannot resign.</p>
+      </div>
+      <div class="class-footer">
+        <div><strong>CLASS:</strong> LES MAUDITS</div>
+        <div><strong>STATUS:</strong> ACTIVE</div>
+        <div><strong>MEMBERSHIP:</strong> PERMANENT</div>
+        <div><strong>VALID UNTIL:</strong> DEATH</div>
+        <div class="expiry-line">First to reach expiry is a bitch. 😭</div>
       </div>
     </div>
   </div>
@@ -72,5 +80,7 @@
   <div class="seal-small mono">LES MAUDITS — OFFICIAL STUDENT PORTAL — LM-001 THROUGH LM-007</div>
   <div class="final-stamp">Valid until: Death. 😭</div>
 </footer>
+<script src="uploads.js"></script>
+<script>loadAvatar('LM-001');</script>
 </body>
 </html>

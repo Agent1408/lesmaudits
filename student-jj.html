@@ -21,6 +21,7 @@
       <a href="yearbook.html">Yearbook</a>
       <a href="quotes.html">Quotes</a>
       <a href="hall-of-shame.html">Hall of Shame</a>
+      <a href="gallery.html">Gallery</a>
       <a href="stats.html">Statistics</a>
       <a href="calendar.html">Calendar</a>
     </nav>
@@ -31,10 +32,10 @@
 <div class="breadcrumb"><a href="directory.html">← Directory</a> / LM-003</div>
 <section class="block">
   <div class="file-header">
-    <div class="avatar-lg"><img src="https://i.pravatar.cc/400?img=3" alt="JJ"></div>
+    <div class="avatar-lg" id="avatar-LM-003"><img src="https://i.pravatar.cc/400?img=3" alt="JJ" id="avatar-img-LM-003"><label class="avatar-upload-btn" for="avatar-input-LM-003">📷 Upload photo</label><input type="file" id="avatar-input-LM-003" accept="image/*" style="display:none" onchange="handleAvatarUpload(event,'LM-003')"></div>
     <div>
       <h1 class="serif">JJ</h1>
-      <div class="aka">AKA: —</div>
+      <div class="aka">AKA: The Podcast</div>
     </div>
   </div>
   <div class="file-meta-row">
@@ -47,22 +48,30 @@
   <div class="file-grid">
     <div class="file-notes">
       <span class="placeholder-tag">NICKNAME</span>
-      <p>Placeholder — how JJ got called what they're called.</p>
+      <p>Texting is apparently optional when you own a microphone.</p>
       <span class="placeholder-tag">MEMORABLE QUOTE</span>
-      <p>"Placeholder quote goes here." — replace with something JJ actually said.</p>
+      <p class="inc-quote" style="margin:0 0 14px;">&ldquo;Je ss au toilettes actu donc waitez d'abord&rdquo;</p>
+      <p class="qc-context" style="margin-top:-8px;">An early masterpiece of <strong>Francanglais</strong>.</p>
       <span class="placeholder-tag">FUNNY FACT</span>
-      <p>Placeholder — a running joke or defining trait.</p>
+      <p>Sent <strong>797 voice notes</strong> — the most of anyone in Les Maudits. Only <strong>19 photos</strong> and <strong>2 videos</strong>, because apparently the mouth does all the work.</p>
       <span class="placeholder-tag">BEST MOMENT</span>
-      <p>Placeholder — JJ's best appearance in Les Maudits history.</p>
+      <p>Accidentally contributing one of the greatest Francanglais sentences in institutional history.</p>
     </div>
     <div class="file-side">
       <div class="side-card">
         <h4>Appearances</h4>
-        <p>Incidents, trips, and timeline entries JJ shows up in — to be linked once the archive fills in.</p>
+        <p>Francanglais Archives • Voice Note Department • Hall of Shame • Wrapped • Trips</p>
       </div>
       <div class="side-card">
         <h4>Status Log</h4>
-        <p>ACTIVE since 18.08.2025.</p>
+        <p>🟢 <strong>ACTIVE</strong><br>Microphone: <strong>PERMANENTLY ENABLED.</strong></p>
+      </div>
+      <div class="class-footer">
+        <div><strong>CLASS:</strong> LES MAUDITS</div>
+        <div><strong>STATUS:</strong> ACTIVE</div>
+        <div><strong>MEMBERSHIP:</strong> PERMANENT</div>
+        <div><strong>VALID UNTIL:</strong> DEATH</div>
+        <div class="expiry-line">First to reach expiry is a bitch. 😭</div>
       </div>
     </div>
   </div>
@@ -72,5 +81,7 @@
   <div class="seal-small mono">LES MAUDITS — OFFICIAL STUDENT PORTAL — LM-001 THROUGH LM-007</div>
   <div class="final-stamp">Valid until: Death. 😭</div>
 </footer>
+<script src="uploads.js"></script>
+<script>loadAvatar('LM-003');</script>
 </body>
 </html>

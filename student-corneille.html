@@ -21,6 +21,7 @@
       <a href="yearbook.html">Yearbook</a>
       <a href="quotes.html">Quotes</a>
       <a href="hall-of-shame.html">Hall of Shame</a>
+      <a href="gallery.html">Gallery</a>
       <a href="stats.html">Statistics</a>
       <a href="calendar.html">Calendar</a>
     </nav>
@@ -31,10 +32,10 @@
 <div class="breadcrumb"><a href="directory.html">← Directory</a> / LM-005</div>
 <section class="block">
   <div class="file-header">
-    <div class="avatar-lg"><img src="https://i.pravatar.cc/400?img=5" alt="Corneille"></div>
+    <div class="avatar-lg" id="avatar-LM-005"><img src="https://i.pravatar.cc/400?img=5" alt="Corneille" id="avatar-img-LM-005"><label class="avatar-upload-btn" for="avatar-input-LM-005">📷 Upload photo</label><input type="file" id="avatar-input-LM-005" accept="image/*" style="display:none" onchange="handleAvatarUpload(event,'LM-005')"></div>
     <div>
       <h1 class="serif">Corneille</h1>
-      <div class="aka">AKA: —</div>
+      <div class="aka">AKA: The Silent Operator</div>
     </div>
   </div>
   <div class="file-meta-row">
@@ -47,22 +48,30 @@
   <div class="file-grid">
     <div class="file-notes">
       <span class="placeholder-tag">NICKNAME</span>
-      <p>Placeholder — how Corneille got called what they're called.</p>
+      <p>Present enough to know everything. Quiet enough to avoid being blamed for most of it.</p>
       <span class="placeholder-tag">MEMORABLE QUOTE</span>
-      <p>"Placeholder quote goes here." — replace with something Corneille actually said.</p>
+      <p class="inc-quote" style="margin:0 0 14px;">No verified legendary quote archived yet.</p>
+      <p class="qc-context" style="margin-top:-8px;">Which is honestly extremely on-brand.</p>
       <span class="placeholder-tag">FUNNY FACT</span>
-      <p>Placeholder — a running joke or defining trait.</p>
+      <p>Only <strong>1,513 messages</strong>, yet still contributed <strong>160 voice notes</strong>, <strong>90 photos</strong> and <strong>40 videos</strong>. Also had the fewest question-containing messages among the regular six: <strong>73</strong>. Corneille apparently accepts information without launching an investigation.</p>
       <span class="placeholder-tag">BEST MOMENT</span>
-      <p>Placeholder — Corneille's best appearance in Les Maudits history.</p>
+      <p>Somehow surviving Les Maudits while maintaining a suspicious amount of reasonable behaviour.</p>
     </div>
     <div class="file-side">
       <div class="side-card">
         <h4>Appearances</h4>
-        <p>Incidents, trips, and timeline entries Corneille shows up in — to be linked once the archive fills in.</p>
+        <p>The Seven Completed • Peace Department • Hall of Shame • Wrapped • Yearbook</p>
       </div>
       <div class="side-card">
         <h4>Status Log</h4>
-        <p>ACTIVE since 18.08.2025.</p>
+        <p>🟢 <strong>ACTIVE since 07.11.2025</strong><br>Threat level: 🟢 <strong>SUSPICIOUSLY NORMAL</strong></p>
+      </div>
+      <div class="class-footer">
+        <div><strong>CLASS:</strong> LES MAUDITS</div>
+        <div><strong>STATUS:</strong> ACTIVE</div>
+        <div><strong>MEMBERSHIP:</strong> PERMANENT</div>
+        <div><strong>VALID UNTIL:</strong> DEATH</div>
+        <div class="expiry-line">First to reach expiry is a bitch. 😭</div>
       </div>
     </div>
   </div>
@@ -72,5 +81,7 @@
   <div class="seal-small mono">LES MAUDITS — OFFICIAL STUDENT PORTAL — LM-001 THROUGH LM-007</div>
   <div class="final-stamp">Valid until: Death. 😭</div>
 </footer>
+<script src="uploads.js"></script>
+<script>loadAvatar('LM-005');</script>
 </body>
 </html>
