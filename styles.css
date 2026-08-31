@@ -52,6 +52,17 @@ nav.links a{
   white-space:nowrap;
 }
 nav.links a:hover, nav.links a.active{color:var(--gold-soft);}
+.logout-link{
+  font-size:11.5px; letter-spacing:0.07em; text-transform:uppercase; font-weight:500;
+  color:var(--stamp-bright);
+  border:1px solid var(--stamp-bright);
+  border-radius:4px;
+  padding:5px 12px;
+  margin-left:16px;
+  white-space:nowrap;
+  transition:background .2s ease, color .2s ease;
+}
+.logout-link:hover{background:var(--stamp-bright); color:var(--bg);}
 
 /* ---------- HERO (home) ---------- */
 .hero{
@@ -303,6 +314,47 @@ main.single section.block:last-of-type{border-bottom:none;}
   font-size:10px; letter-spacing:0.06em; color:var(--gold-soft);
   border:1px solid var(--line); padding:4px 10px; border-radius:3px;
 }
+.incident .inc-subject{
+  font-family:'IBM Plex Mono', monospace; font-size:11px; color:var(--stamp-bright);
+  letter-spacing:0.05em; margin-bottom:12px;
+}
+.incident p{margin-bottom:12px;}
+.incident p:last-of-type{margin-bottom:0;}
+.inc-quote{
+  border-left:2px solid var(--gold); padding:6px 0 6px 16px; margin:14px 0;
+  font-family:'Fraunces', serif; font-style:italic; font-size:15px; color:var(--ink);
+}
+.inc-quote span{display:block; margin-top:4px; font-family:'IBM Plex Mono', monospace; font-style:normal; font-size:11px; color:var(--muted);}
+.inc-facts{display:flex; flex-wrap:wrap; gap:8px; margin-top:14px;}
+.inc-facts .case-status{margin-top:0;}
+.inc-figure{color:var(--gold-soft); font-weight:600;}
+
+/* ---------- LORE (expanded) ---------- */
+.lore-body{display:block;}
+.lore-section{margin-bottom:52px;}
+.lore-section:last-child{margin-bottom:0;}
+.lore-section h3{font-family:'Fraunces', serif; font-size:22px; margin-bottom:14px;}
+.lore-section .placeholder-tag{margin-bottom:14px;}
+.dept-grid-lore{display:grid; grid-template-columns:repeat(auto-fill, minmax(220px,1fr)); gap:16px; margin-top:16px;}
+.dept-mini{background:var(--surface); border:1px solid var(--line); border-radius:10px; padding:18px;}
+.dept-mini .dept-icon{font-size:20px; margin-bottom:8px;}
+.dept-mini h4{font-family:'Fraunces', serif; font-size:15px; margin-bottom:4px;}
+.dept-mini .dept-role{font-family:'IBM Plex Mono', monospace; font-size:10px; color:var(--gold-soft); margin-bottom:8px; letter-spacing:0.04em;}
+.dept-mini p{color:var(--muted); font-size:13px; margin:0;}
+.law-box{
+  border:1px solid var(--gold); border-radius:8px; padding:26px; text-align:center; margin:20px 0;
+}
+.law-box p{font-family:'Fraunces', serif; font-size:clamp(18px,2.4vw,24px); font-weight:600; letter-spacing:0.02em; color:var(--gold-soft); margin:0;}
+.standings-list{display:flex; flex-wrap:wrap; gap:10px; margin-top:16px;}
+.standing-chip{
+  font-family:'IBM Plex Mono', monospace; font-size:11.5px; color:#6FBF73;
+  border:1px solid var(--line); padding:6px 12px; border-radius:20px;
+}
+.symbol-tally{display:flex; gap:24px; margin:16px 0; flex-wrap:wrap;}
+.symbol-tally div{font-family:'IBM Plex Mono', monospace; font-size:13px; color:var(--muted);}
+.symbol-tally span{display:block; font-size:26px; margin-bottom:4px;}
+.lore-quote-list{color:var(--muted); font-size:14px; margin:14px 0; line-height:2;}
+.lore-quote-list li{list-style:none;}
 
 /* ---------- YEARBOOK ---------- */
 .year-tabs{display:flex; gap:10px; margin-bottom:28px; flex-wrap:wrap;}
