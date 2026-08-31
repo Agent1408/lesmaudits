@@ -9,6 +9,7 @@
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+<script>if(sessionStorage.getItem("lm_access")!=="granted"){window.location.href="login.html";}</script>
 <header class="portal-nav">
   <div class="nav-inner">
     <a class="wordmark" href="index.html">LES <span>MAUDITS</span></a>
@@ -19,11 +20,9 @@
       <a href="incidents.html">Incidents</a>
       <a href="yearbook.html">Yearbook</a>
       <a href="quotes.html">Quotes</a>
-      <a href="timeline.html">Timeline</a>
       <a href="hall-of-shame.html">Hall of Shame</a>
       <a href="stats.html">Statistics</a>
-      <a href="trips.html">School Trips</a>
-      <a href="notices.html">Notices</a>
+      <a href="calendar.html">Calendar</a>
     </nav>
   </div>
 </header>
@@ -69,30 +68,20 @@
       <h3 class="serif">Les Maudits Quotes</h3>
       <p>Things members have actually said.</p>
     </a>
-    <a class="dept-card" href="timeline.html">
-      <div class="dn mono">06</div>
-      <h3 class="serif">Timeline</h3>
-      <p>A visual history of the friendship.</p>
-    </a>
     <a class="dept-card" href="hall-of-shame.html">
-      <div class="dn mono">07</div>
+      <div class="dn mono">06</div>
       <h3 class="serif">Hall of Shame</h3>
       <p>The unserious alternative to a Hall of Fame.</p>
     </a>
     <a class="dept-card" href="stats.html">
-      <div class="dn mono">08</div>
+      <div class="dn mono">07</div>
       <h3 class="serif">Group Statistics</h3>
       <p>Les Maudits Wrapped.</p>
     </a>
-    <a class="dept-card" href="trips.html">
-      <div class="dn mono">09</div>
-      <h3 class="serif">School Trips</h3>
-      <p>Adventures, past and upcoming.</p>
-    </a>
-    <a class="dept-card" href="notices.html">
-      <div class="dn mono">10</div>
-      <h3 class="serif">Notice Board</h3>
-      <p>What's next on the calendar.</p>
+    <a class="dept-card" href="calendar.html">
+      <div class="dn mono">08</div>
+      <h3 class="serif">Calendar</h3>
+      <p>Birthdays, holidays, and the countdown to each.</p>
     </a>
   </div>
 </section>
